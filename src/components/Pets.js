@@ -25,7 +25,23 @@ class Pets extends React.Component {
   }
 
   render() {
-    return <div className="Pets">this is the Pets page!!</div>;
+
+    let petsToDisplay = this.state.pets.map((pet)=>{
+      return (
+        <div className="pet-card">
+          <h2>Name: {pet.name}</h2>
+          <h3>Species: {pet.type}</h3>
+          <h3>Breed: {pet.breed}</h3>
+        </div>
+      )
+    })
+
+    return (
+      <div className="Pets">
+        <h1>this is the Pets page!!</h1>
+        <div className="pets-container">{petsToDisplay}</div>
+      </div>
+    )
   }
 }
 
