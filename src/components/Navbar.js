@@ -6,7 +6,15 @@ class Navbar extends React.Component {
   render() {
     return (
     <div className="Navbar">
-        <Link to="/">Home</Link>
+        {/* adding an image as a link, instead of the word "Home" */}
+        {/* Added css to App.css for the `pet-logo`, and `.Navbar` */}
+        <Link to="/">
+            <img 
+                className="pet-logo" 
+                src="https://i.pinimg.com/originals/af/fb/c9/affbc96be98edecba473e0e630069b3b.png" 
+                alt="pet-logo" 
+            />
+        </Link>
         <Link to="/pets">Pets</Link>
         <Link to="/employees">Employees</Link>
     </div>
