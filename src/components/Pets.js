@@ -20,6 +20,10 @@ class Pets extends React.Component {
       })
   }
 
+  componentDidMount = () => {
+    this.fetchPets();
+  }
+
   render() {
     return <div className="Pets">this is the Pets page!!</div>;
   }
